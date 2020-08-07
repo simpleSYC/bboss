@@ -1,0 +1,12 @@
+T=[
+T_0=["paskalin","100 g","vitaminka","najakiot kecap",5,"vkus","diet","cili","pikant","sport","x",26],
+T_1=["paskalin","123 g","vitaminka","najakiot nesto na svetot cipsoo",4,"vkus","diet","cili","pikant","sport","x",87],
+T_2=["paskalin","155 g","vitaminka","diatelnijot sok",2,"vkus","diet","cili","pikant","sport","x",45],
+T_3=["Rio MINAs","100 g","vitaminka","aaada",5,"vkus","diet","cili","pikant","sport","x",23],
+T_4=["Rio MINAs","100 g","vitaminka","dasda",2,"vkus","diet","cili","pikant","sport","x",92],
+T_5=["Rio MINAs","100 g","vitaminka","asddas ",3,"vkus","diet","cili","pikant","sport","x",89],
+T_6=["Tursko","100 g","vitaminka","asddas ",3,"vkus","diet","cili","pikant","sport","x",33],
+T_7=["paskalin","100 g","vitaminka","asddas ",3,"vkus","diet","cili","pikant","sport","x",43],
+T_8=["paskalin","100 g","vitaminka","asddas ",4,"vkus","diet","cili","pikant","sport","x",56],
+T_9=["paskalin","100 g","vitaminka","asddda",4,"vkus","diet","cili","pikant","sport","x",77],
+T_10=["paskalin","100 g","vitaminka","sad",4,"vkus","diet","cili","pikant","sport","x",49]]
