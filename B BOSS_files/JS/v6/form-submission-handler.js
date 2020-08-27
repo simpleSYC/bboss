@@ -1,8 +1,9 @@
 (function() {
 	
 var iFo=document.getElementById("Ifo");
-var FRM=document.getElementById("tst");  // gform/ ova e toa glavnoto za snemuvanjeee
-	
+var FRM=document.getElementById("frm");  // gform/ ova e toa glavnoto za snemuvanjeee
+
+
 
   function validEmail(email) {	  
     var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
@@ -22,9 +23,9 @@ var FRM=document.getElementById("tst");  // gform/ ova e toa glavnoto za snemuva
   // get all data in form and return object
   function getFormData(form) {
     var elements = form.elements;
-
-cr8ElistaMail(); //// ova go turam tujka na pretest
-
+	
+	
+									cr8ElistaMail(); //// ova go turam tujka na pretest
 
     var fields = Object.keys(elements).filter(function(k) {
           return (elements[k].name !== "honeypot");
@@ -41,7 +42,6 @@ cr8ElistaMail(); //// ova go turam tujka na pretest
 
     var formData = {};
     fields.forEach(function(name){
-		
       var element = elements[name];
 	  
       // singular form elements just have one value
@@ -60,15 +60,10 @@ cr8ElistaMail(); //// ova go turam tujka na pretest
       }
     });
 
-
-
-
     // add form-specific values into the data
     formData.formDataNameOrder = JSON.stringify(fields);
-    formData.formGoogleSheetName = form.dataset.sheet || "ajde"; // default sheet name !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    formData.formGoogleSheetName = form.dataset.sheet || "BB"; // default sheet name
     formData.formGoogleSendEmail = form.dataset.email || ""; // no email by default
-
-
 
     console.log(formData);
     return formData;
@@ -92,7 +87,9 @@ cr8ElistaMail(); //// ova go turam tujka na pretest
         return false;
       }
     } else {
-		
+
+	document.getElementById("KOPCEppl").style.display="none";
+	
       disableAllButtons(form);
       var url = form.action;
       var xhr = new XMLHttpRequest();
@@ -104,16 +101,11 @@ cr8ElistaMail(); //// ova go turam tujka na pretest
           console.log(xhr.responseText);
 		  
 var Emlot=data.email;		  
-		  
-		iFo.innerHTML="<span style='color:green;'>Diese BESTELUNG ist erfoglisch gemacht</span> <br> <span style='color:yellow;'>"+Emlot+"</span>  <p style='color:white;'> Sie becomen ein Email fur diese Bestelung</p><p style='color:grey;'>refresh die website fur neue bestelung <p>";
-		
-		
-		document.getElementById("KOPCEppl").style.display="none";
-		FRM.style.display="none";
 
+		FRM.style.display="none";
 		
-		
-		
+		iFo.innerHTML="<span style='color:green;'>Diese BESTELUNG ist erfoglisch gemacht</span> <br> <span style='color:yellow;'>"+Emlot+"</span>  <p style='color:white;'> Sie becomen ein Email fur diese Bestelung</p><p style='color:grey;'>refresh die website fur neue bestelung <p>";
+
 		  
           var formElements = form.querySelector(".form-elements")
           if (formElements) {
@@ -150,8 +142,6 @@ var Emlot=data.email;
     for (var i = 0; i < buttons.length; i++) {
       buttons[i].disabled = true;
     }
-	
-
 	
 	
 	
